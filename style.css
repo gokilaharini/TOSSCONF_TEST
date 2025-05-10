@@ -339,10 +339,24 @@ nav {
 .nav-menu a:hover::after {
   width: 100%;
 }
-    .menu-toggle {
+
+
+    .mobile-nav {
       display: none;
+      height: 60px;
+    }
+    
+    .mobile-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 100%;
+    }
+    
+    .mobile-menu-toggle {
       cursor: pointer;
-      font-size: 24px;
+      padding: 10px;
     }
     
     .menu-dots {
@@ -359,11 +373,49 @@ nav {
       background-color: white;
       border-radius: 50%;
     }
+    
+    .mobile-menu {
+      position: absolute;
+      background-color: #333;
+      width: 80%;
+      max-width: 300px;
+      top: 60px;
+      left: -100%;
+      padding: 10px 0;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+    
+    .mobile-menu.active {
+      left: 0;
+      opacity: 1;
+    }
+    
+    .mobile-menu li {
+      list-style: none;
+      padding: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .mobile-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 15px 20px;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    
+    .mobile-menu a:hover {
+      background-color: #444;
+    }
+    
     @media (max-width: 768px) {
       .nav-menu {
         position: absolute;
         flex-direction: column;
-        background-color: #333;
+        background-color: white;
         width: 100%;
         top: 60px;
         left: -100%;
@@ -650,26 +702,12 @@ section.visible .timeline-item {
   list-style: none;
   padding-left: 0;
 }
-
 #call-for-speakers .list-unstyled li {
   margin-bottom: 15px;
   font-size: 1.1rem;
   color: #445566;
   position: relative;
   padding-left: 10px;
-}
-
-/* Add decorative elements */
-#call-for-speakers:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(38, 166, 154, 0.1) 0%, rgba(38, 166, 154, 0) 70%);
-  border-radius: 50%;
-  z-index: 0;
 }
 
 
