@@ -35,27 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.classList.remove('active');
       }
     });
-     // Toggle menu for mobile view
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    
-    mobileMenuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-    });
-    
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-      });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.mobile-nav')) {
-        mobileMenu.classList.remove('active');
-      }
-    });
   // Smooth scrolling for navigation
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {

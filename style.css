@@ -339,24 +339,10 @@ nav {
 .nav-menu a:hover::after {
   width: 100%;
 }
-
-
-    .mobile-nav {
+    .menu-toggle {
       display: none;
-      height: 60px;
-    }
-    
-    .mobile-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-      height: 100%;
-    }
-    
-    .mobile-menu-toggle {
       cursor: pointer;
-      padding: 10px;
+      font-size: 24px;
     }
     
     .menu-dots {
@@ -370,47 +356,9 @@ nav {
     .dot {
       width: 4px;
       height: 4px;
-      background-color: white;
+      background-color: black;
       border-radius: 50%;
     }
-    
-    .mobile-menu {
-      position: absolute;
-      background-color: #333;
-      width: 80%;
-      max-width: 300px;
-      top: 60px;
-      left: -100%;
-      padding: 10px 0;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      opacity: 0;
-    }
-    
-    .mobile-menu.active {
-      left: 0;
-      opacity: 1;
-    }
-    
-    .mobile-menu li {
-      list-style: none;
-      padding: 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    .mobile-menu a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      padding: 15px 20px;
-      display: block;
-      transition: all 0.3s ease;
-    }
-    
-    .mobile-menu a:hover {
-      background-color: #444;
-    }
-    
     @media (max-width: 768px) {
       .nav-menu {
         position: absolute;
