@@ -15,7 +15,26 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelector(`.${dayId}`).classList.add('active');
     });
   });
-  
+  const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-container')) {
+        navMenu.classList.remove('active');
+      }
+    });
   // Smooth scrolling for navigation
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {

@@ -40,7 +40,7 @@ body {
 
 /* Header Styles */
 header {
-  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue), var(--primary-green));
+  background: linear-gradient(135deg, var(--secondary-green), var(--primary-blue), var(--primary-green));
   color: var(--light-text);
   min-height: 100vh;
   display: flex;
@@ -284,39 +284,48 @@ z-index: 2;
 
 /* Navigation */
 nav {
-  background: white;
+      background: var(--light-blue);
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: center;
-}
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-}
-
-.nav-menu li a {
-  display: block;
-  padding: 20px 15px;
-  text-decoration: none;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 60px;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-menu li {
+      padding: 0 15px;
+    }
+    
+    .nav-menu a {
+  padding: 19px 6px;
+      text-decoration: none;
   color: var(--dark-text);
   font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
-}
+    }
 
-.nav-menu li a:hover,
-.nav-menu li a:active {
+.nav-menu a:hover,
+.nav-menu a:active {
   color: var(--primary-blue);
 }
 
-.nav-menu li a::after {
+.nav-menu a::after {
   content: '';
   position: absolute;
   width: 0;
@@ -327,10 +336,57 @@ nav {
   transition: width 0.3s ease;
 }
 
-.nav-menu li a:hover::after {
+.nav-menu a:hover::after {
   width: 100%;
 }
-
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+    }
+    
+    .menu-dots {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 16px;
+      width: 20px;
+    }
+    
+    .dot {
+      width: 4px;
+      height: 4px;
+      background-color: white;
+      border-radius: 50%;
+    }
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: absolute;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        top: 60px;
+        left: -100%;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      }
+      
+      .nav-menu li {
+        padding: 15px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      
+      .menu-toggle {
+        display: flex;
+        align-items: center;
+      }
+      
+      .nav-menu.active {
+        left: 0;
+      }
+    }
 /* Section Styles */
 section {
   padding: var(--section-padding);
@@ -543,7 +599,94 @@ section.visible .timeline-item {
   margin-bottom: 10px;
   display: block;
 }
+/* Call for Speakers Section Styling with Blue and Green Theme */
+#call-for-speakers {
+  background-color: var(--light-green);
+  padding: 70px 0;
+  position: relative;
+  overflow: hidden;
+}
 
+#call-for-speakers h2 {
+  color: var(--secondary-blue);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+
+#call-for-speakers .lead {
+  color: #445566;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+#call-for-speakers .speaker-info {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+  border-left: 4px solid var(--primary-green);
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#call-for-speakers .speaker-info h4 {
+  color: var(--secondary-blue);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+#call-for-speakers .list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+#call-for-speakers .list-unstyled li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #445566;
+  position: relative;
+  padding-left: 10px;
+}
+
+/* Add decorative elements */
+#call-for-speakers:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(38, 166, 154, 0.1) 0%, rgba(38, 166, 154, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #call-for-speakers h2 {
+    font-size: 2rem;
+  }
+  
+  #call-for-speakers .lead {
+    font-size: 1.05rem;
+  }
+  
+  #call-for-speakers .speaker-info {
+    padding: 20px;
+  }
+}
 /* Contact Section */
 #contact {
   background: var(--light-green);
