@@ -122,63 +122,144 @@
   
     <!-- Schedule Section -->
     <section id="schedule">
-      <div class="container text-center">
-        <h2>நிகழ்ச்சி நிரல்</h2>
-        
-        <div class="schedule-tabs">
-          <button class="tab-btn active" data-day="day1">ஜூலை 18</button>
-          <button class="tab-btn" data-day="day2">ஜூலை 19</button>
+        <div class="container">
+            <div class="header">
+                <h2>நிகழ்ச்சி நிரல்</h2>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-day="all">அனைத்து நாட்கள்</button>
+                <button class="tab-btn" data-day="15July">ஜூலை 15</button>
+                <button class="tab-btn" data-day="16July">ஜூலை 16</button>
+                <button class="tab-btn" data-day="17July">ஜூலை 17</button>
+                <button class="tab-btn" data-day="18July">ஜூலை 18</button>
+                <button class="tab-btn" data-day="19July">ஜூலை 19</button>
+            </div>
+
+            <div class="timeline">
+                <!-- July 15 Events -->
+                <div class="timeline-item left" data-day="15July">
+                    <div class="content" id="event-1">
+                        <span class="timeline-date">ஜூலை 15, 2025</span>
+                        <h3 class="timeline-title">Python பயன்படுத்தி AI அறிமுகம் <span class="badge badge-success">இலவச இணைய உரை</span></h3>
+                        <p class="english-title">Introduction to AI using Python</p>
+                        <p class="speaker">ராஜவசந்தன்</p>
+                        <p class="event-time">10:00 IST</p>
+                        <div class="btn-wrapper">
+                            <a class="btn btn-info" href="#" target="_blank">JOIN MEET</a>
+                            <a class="btn btn-primary" href="#" target="_blank">YOUTUBE LIVE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right" data-day="15July">
+                    <div class="content" id="event-2">
+                        <span class="timeline-date">ஜூலை 15, 2025</span>
+                        <h3 class="timeline-title">React JS வலை உருவாக்கம் <span class="badge badge-success">இலவச இணைய உரை</span></h3>
+                        <p class="english-title">Web Development with React JS</p>
+                        <p class="speaker">ஸ்ரீதர்</p>
+                        <p class="event-time">17:00 IST</p>
+                        <div class="btn-wrapper">
+                            <a class="btn btn-info" href="#" target="_blank">JOIN MEET</a>
+                            <a class="btn btn-primary" href="#" target="_blank">YOUTUBE LIVE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- July 16 Events -->
+                <div class="timeline-item left" data-day="16July">
+                    <div class="content" id="event-3">
+                        <span class="timeline-date">ஜூலை 16, 2025</span>
+                        <h3 class="timeline-title">செயற்கை நுண்ணறிவுக் காலத்தில் கட்டற்ற மென்பொருட்களின் பங்கும் பயனும் <span class="badge badge-success">இலவச இணைய உரை</span></h3>
+                        <p class="english-title">The role and use of FOSS in the era of AI</p>
+                        <p class="speaker">மயூரன்</p>
+                        <p class="event-time">10:00 IST</p>
+                        <div class="btn-wrapper">
+                            <a class="btn btn-info" href="#" target="_blank">JOIN MEET</a>
+                            <a class="btn btn-primary" href="#" target="_blank">YOUTUBE LIVE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right" data-day="16July">
+                    <div class="content" id="event-4">
+                        <span class="timeline-date">ஜூலை 16, 2025</span>
+                        <h3 class="timeline-title">Docker கண்டெய்னர்கள் அறிமுகம் <span class="badge badge-success">இலவச இணைய உரை</span></h3>
+                        <p class="english-title">Introduction to Docker Containers</p>
+                        <p class="speaker">சாகில்</p>
+                        <p class="event-time">14:00 IST</p>
+                        <div class="btn-wrapper">
+                            <a class="btn btn-info" href="#" target="_blank">JOIN MEET</a>
+                            <a class="btn btn-primary" href="#" target="_blank">YOUTUBE LIVE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- July 17 Events -->
+                <div class="timeline-item left" data-day="17July">
+                    <div class="content" id="event-5">
+                        <span class="timeline-date">ஜூலை 17, 2025</span>
+                        <h3 class="timeline-title">லினக்ஸ் கேமிங் அறிமுகம் <span class="badge badge-success">இலவச இணைய உரை</span></h3>
+                        <p class="english-title">Gaming on Linux</p>
+                        <p class="speaker">கலைஅரசன்</p>
+                        <p class="event-time">15:00 IST</p>
+                        <div class="btn-wrapper">
+                            <a class="btn btn-info" href="#" target="_blank">JOIN MEET</a>
+                            <a class="btn btn-primary" href="#" target="_blank">YOUTUBE LIVE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right" data-day="17July">
+                    <div class="content" id="event-6">
+                        <span class="timeline-date">ஜூலை 17, 2025</span>
+                        <h3 class="timeline-title">GIMP இமேஜ் எடிட்டிங் அறிமுகம் <span class="badge badge-success">இலவச இணைய உரை</span></h3>
+                        <p class="english-title">Introduction to GIMP Image Editing</p>
+                        <p class="speaker">விஜயராகவன்</p>
+                        <p class="event-time">17:00 IST</p>
+                        <div class="btn-wrapper">
+                            <a class="btn btn-info" href="#" target="_blank">JOIN MEET</a>
+                            <a class="btn btn-primary" href="#" target="_blank">YOUTUBE LIVE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- July 18 Events -->
+                <div class="timeline-item left" data-day="18July">
+                    <div class="content" id="event-7">
+                        <span class="timeline-date">ஜூலை 18, 2025</span>
+                        <h3 class="timeline-title">தமிழ் கட்டற்ற மென்பொருள் மாநாடு 2025 <span class="badge badge-warning">Offline Event</span></h3>
+                        <p class="red-highlight">பதிவு கட்டாயம் • பதிவுக்கான கடைசி தேதி: ஜூலை 10, 2025</p>
+                        <ul style="margin-top: 15px; margin-left: 20px;">
+                            <li>கட்டற்ற மென்பொருள் குழுக்களின் அறிமுகம்</li>
+                            <li>மின்னல் உரைகள் (15 நிமிடம்/தலைப்பு)</li>
+                            <li>கட்டற்ற மென்பொருள் கருத்தரங்கம்</li>
+                            <li>தமிழ் மொழி மென்பொருள் உருவாக்கம்</li>
+                            <li>கட்டற்ற மென்பொருள் கண்காட்சி</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- July 19 Events -->
+                <div class="timeline-item right" data-day="19July">
+                    <div class="content" id="event-8">
+                        <span class="timeline-date">ஜூலை 19, 2025</span>
+                        <h3 class="timeline-title">தமிழ் கட்டற்ற மென்பொருள் மாநாடு 2025 <span class="badge badge-warning">Offline Event</span></h3>
+                        <p class="english-title">Day 2: Tamil FOSS Conference 2025</p>
+                        <ul style="margin-top: 15px; margin-left: 20px;">
+                            <li>FOSS பங்களிப்பாளர்கள் பட்டறை</li>
+                            <li>நிரல் மூலம் இசை உருவாக்கம் - பயிற்சி பட்டறை</li>
+                            <li>தமிழ் OCR தொழில்நுட்பங்கள்</li>
+                            <li>கட்டற்ற மென்பொருள் மாநாடு அறிக்கை வெளியீடு</li>
+                            <li>ஓப்பன் சோர்ஸ் நெட்வொர்க்கிங் அரங்கம்</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="schedule-content">
-          <div class="schedule-day day1 active">
-            <div class="timeline-item">
-              <span class="time">9:00 - 10:00</span>
-              <h4>பதிவு & தொடக்க உரை</h4>
-              <p>நிகழ்வின் முதல் நாள் பதிவு மற்றும் தொடக்க உரை</p>
-            </div>
-            <div class="timeline-item">
-              <span class="time">10:00 - 11:30</span>
-              <h4>கட்டற்ற மென்பொருள் அறிமுகம்</h4>
-              <p>தமிழில் கட்டற்ற மென்பொருள் பற்றிய அடிப்படை அறிமுகம்</p>
-            </div>
-            <div class="timeline-item">
-              <span class="time">11:45 - 13:00</span>
-              <h4>லினக்ஸ் பயிற்சி பட்டறை</h4>
-              <p>தமிழில் லினக்ஸ் செயல்பாடுகள் பற்றிய பயிற்சி</p>
-            </div>
-            <div class="timeline-item">
-              <span class="time">14:00 - 16:00</span>
-              <h4>தமிழ் ஒருங்குறி & கட்டற்ற தட்டச்சு மென்பொருட்கள்</h4>
-              <p>தமிழில் கணினி பயன்பாடுகளை உருவாக்குதல் பற்றிய அமர்வு</p>
-            </div>
-          </div>
-          
-          <div class="schedule-day day2">
-            <div class="timeline-item">
-              <span class="time">9:30 - 11:00</span>
-              <h4>பைதான் நிரலாக்கம்</h4>
-              <p>தமிழில் பைதான் நிரலாக்கம் பற்றிய அறிமுகம்</p>
-            </div>
-            <div class="timeline-item">
-              <span class="time">11:15 - 13:00</span>
-              <h4>வலை உருவாக்க பயிற்சி</h4>
-              <p>தமிழில் வலைத்தளங்களை உருவாக்குதல் பற்றிய பயிற்சி</p>
-            </div>
-            <div class="timeline-item">
-              <span class="time">14:00 - 15:30</span>
-              <h4>கட்டற்ற மென்பொருளில் பங்களிப்பு</h4>
-              <p>கட்டற்ற மென்பொருள் திட்டங்களில் எவ்வாறு பங்களிப்பது என்பது பற்றிய விளக்கம்</p>
-            </div>
-            <div class="timeline-item">
-              <span class="time">15:45 - 17:00</span>
-              <h4>நிறைவு விழா</h4>
-              <p>கருத்தரங்கு நிறைவு விழா மற்றும் சான்றிதழ் வழங்குதல்</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
+
+
     <!--Call for Speakers-->
     <section id="call-for-speakers" class="py-5">
   <div class="container text-center">
